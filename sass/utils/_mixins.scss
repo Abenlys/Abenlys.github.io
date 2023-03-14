@@ -1,0 +1,51 @@
+
+@mixin troisbtn {
+    .lestroisbtn {
+        display: flex;
+        @for $i from 1 through $nb-fonct-box {
+            &__#{$i} {
+                &__box {
+                    background-color: $lightgreybg;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+                    border-radius: 20px;
+                    height: 72px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 50px;
+                    gap: 30px;
+                    &:hover {
+                        background-color: $bglightpurple;
+                        .lestroisbtn {
+                            @for $i from 1 through $nb-fonct-box {
+                                &__#{$i} {
+                                    &__box {
+                                        &__icon-color {
+                                            color: $color-primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &__num {
+                        background-color: $color-primary;
+                        border-radius: 50%;
+                        width: 24px;
+                        height: 24px;
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        justify-content: center;
+                        position: absolute;
+                        left: 10px;
+                    }
+                    &__icon-color {
+                        color: $greyicon;
+                    }
+                }
+            }
+        }
+    }
+}
+

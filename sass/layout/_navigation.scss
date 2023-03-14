@@ -1,0 +1,18 @@
+.fonctionnement {
+    margin-left: 20px;
+    margin-right: 20px;
+    .fonct-t {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+    strong {
+        font-size: 24px;
+    }
+    .lestroisbtn {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @include troisbtn;
+    }
+
+}

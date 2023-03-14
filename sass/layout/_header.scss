@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    .logo {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      height: 63px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    .lieu {
+      display: flex;
+      background-color: $greybackground;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      gap: 17px;
+      &__search {
+        border: none;
+        background-color: $greybackground;
+      }
+    }
+    .decouv-rest {
+      background-color: $lightgreybg;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 39px;
+      p {
+        font-size: 18px;
+        font-weight: 300;
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      strong {
+      font-size: 24px;
+      }
+    }
+
+}

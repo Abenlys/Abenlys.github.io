@@ -1,0 +1,215 @@
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+body *:not(h1) {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  border: none;
+}
+.btn__large {
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  margin-bottom: 40px;
+}
+.btn__extralarge {
+  width: 218px;
+  margin-bottom: 57px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header .logo {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  height: 63px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.header .lieu {
+  display: flex;
+  background-color: #EAEAEA;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  gap: 17px;
+}
+.header .lieu__search {
+  border: none;
+  background-color: #EAEAEA;
+}
+.header .decouv-rest {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 39px;
+}
+.header .decouv-rest p {
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.header .decouv-rest strong {
+  font-size: 24px;
+}
+
+.fonctionnement {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.fonctionnement .fonct-t {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.fonctionnement strong {
+  font-size: 24px;
+}
+.fonctionnement .lestroisbtn {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn {
+  display: flex;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box {
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  gap: 30px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box:hover .lestroisbtn__1__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box:hover .lestroisbtn__2__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box:hover .lestroisbtn__3__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box__num {
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__1__box__icon-color {
+  color: #7E7E7E;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box {
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  gap: 30px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box:hover .lestroisbtn__1__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box:hover .lestroisbtn__2__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box:hover .lestroisbtn__3__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box__num {
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__2__box__icon-color {
+  color: #7E7E7E;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box {
+  background-color: #F6F6F6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+  gap: 30px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box:hover .lestroisbtn__1__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box:hover .lestroisbtn__2__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box:hover .lestroisbtn__3__box__icon-color {
+  color: #9356DC;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box__num {
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+}
+.fonctionnement .lestroisbtn .lestroisbtn__3__box__icon-color {
+  color: #7E7E7E;
+}
+
+/*# sourceMappingURL=style.css.map */
