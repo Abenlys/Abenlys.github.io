@@ -1,40 +1,80 @@
 .header {
+  display: flex;
+  flex-direction: column;
+  .logo {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    height: 63px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .lieu {
+    display: flex;
+    background-color: $greybackground;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 17px;
+    &__search {
+      border: none;
+      background-color: $greybackground;
+    }
+  }
+  .decouv-rest {
+    background-color: $lightgreybg;
     display: flex;
     flex-direction: column;
-    .logo {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-      height: 63px;
-      align-items: center;
-      justify-content: center;
-      display: flex;
+    align-items: center;
+    padding-top: 39px;
+    h1 {
+      font-family: 'roboto';
     }
-    .lieu {
-      display: flex;
-      background-color: $greybackground;
-      align-items: center;
-      justify-content: center;
-      height: 50px;
-      gap: 17px;
-      &__search {
-        border: none;
-        background-color: $greybackground;
-      }
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      padding-top: 10px;
+      padding-bottom: 20px;
     }
-    .decouv-rest {
-      background-color: $lightgreybg;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 39px;
-      p {
-        font-size: 18px;
-        font-weight: 300;
-        padding-top: 10px;
-        padding-bottom: 20px;
-      }
-      strong {
-      font-size: 24px;
-      }
+  }
+  .fonctionnement {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 68px;
+    .fonct-t {
+        padding-top: 50px;
+        padding-bottom: 25px;
+        font-size: 24px;
     }
-
+  }
+}
+.lestroisbtn {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @include troisbtn;
+  p {
+    font-weight: 500;
+  }
+  @media all and (min-width: 768px) and (max-width:992px) {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    a {
+      display: flex;
+      flex-direction: row;
+      width: 90%;
+    }
+  }
+  @media all and (min-width:993px) {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    a {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
 }

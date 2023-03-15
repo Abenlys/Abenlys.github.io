@@ -1,9 +1,9 @@
 
 @mixin troisbtn {
     .lestroisbtn {
-        display: flex;
         @for $i from 1 through $nb-fonct-box {
             &__#{$i} {
+                counter-increment: i;
                 &__box {
                     background-color: $lightgreybg;
                     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -12,8 +12,22 @@
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
-                    padding-left: 50px;
-                    gap: 30px;
+                    padding-left: 30px;
+                    padding-right: 10px;
+                    gap: 20px;
+                    &::before {
+                        content: counter(i);
+                        background-color: $color-primary;
+                        border-radius: 50%;
+                        width: 24px;
+                        height: 24px;
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        justify-content: center;
+                        position: absolute;
+                        transform: translateX(-40px);
+                    }
                     &:hover {
                         background-color: $bglightpurple;
                         .lestroisbtn {
@@ -28,18 +42,6 @@
                             }
                         }
                     }
-                    &__num {
-                        background-color: $color-primary;
-                        border-radius: 50%;
-                        width: 24px;
-                        height: 24px;
-                        display: flex;
-                        align-items: center;
-                        color: white;
-                        justify-content: center;
-                        position: absolute;
-                        left: 10px;
-                    }
                     &__icon-color {
                         color: $greyicon;
                     }
@@ -49,3 +51,22 @@
     }
 }
 
+@keyframes remplissage {
+
+    25% {
+        transform: scale(0.25);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(0.50);
+        opacity: 0.8;
+    }
+    75% {
+        transform: scale(0.75);
+        opacity: 0.95;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
