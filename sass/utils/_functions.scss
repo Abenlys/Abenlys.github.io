@@ -1,0 +1,4 @@
+@function adjust-hue-on-hover($color) {
+    $adjusted-color: adjust-hue($color-secondary, 20deg), adjust-hue($color-primary, 20deg);
+    @return linear-gradient($adjusted-color);
+}

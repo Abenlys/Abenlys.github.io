@@ -16,19 +16,6 @@
     .ploc {
         font-weight: 300;
     }
-    .fa-heart {
-        font-size: 2rem;
-        &:hover {
-            background-image: linear-gradient($color-primary, $color-secondary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            font-weight: bold;
-            animation: remplissage 300ms;
-            animation-delay: 100ms;
-        }
-
-    }
     .les4rest {
         margin-left: 20px;
         margin-right: 20px;
@@ -38,12 +25,12 @@
         padding-bottom: 60px;
         @media all and (min-width:768px) {
             flex-direction: row;
+            overflow-x: scroll;
         }
         a {
             position: relative;
-            @media all and (min-width:768px) {
+            @media all and (min-width:767px) {
                 width: 340px;
-                // overflow-x: scroll;
             }
         }
         @for $i from 1 through $nb-rest-box {
@@ -77,4 +64,139 @@
             }
         }
     }
+}
+.fa-heart {
+    font-size: 2rem;
+    &:hover {
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        animation: remplissage 300ms;
+        animation-delay: 100ms;
+    }
+
+}
+
+.titres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-left: 17px;
+  }
+.menu {
+    z-index: 2;
+    margin-top: -50px;
+    border-radius: 20px 20px 0 0;
+    background-color: $bgmenu;
+    max-width: 1055px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title-section {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding-top: 40px;
+        padding-bottom: 12px;
+        width: 100%;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            transform: translateY(700%);
+            height: 3px;
+            width: 40px;
+            background: $color-tertiary;
+        }
+    }
+    section {
+        padding-left: 13px;
+        padding-right: 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .box-p {
+        display: flex;
+        width: 100%;
+        position :relative;
+        transform: translateY(-100%);
+        animation-name: drop-box;
+        animation-duration: $animation-duration;
+        animation-timing-function: $animation-timing-function;
+        animation-fill-mode: forwards;
+        &:hover .fill {
+            width: 59px;
+        }
+        &:hover .box {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:hover .fill .fa-check-circle {
+            color: white;
+        }
+        .box {
+            @include boxmenu;
+            border-radius: 15px;
+            height: 68px;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            width: 100%;
+            overflow: hidden;
+            background-color: white;
+            &__detail {
+                max-width: 500px;
+                min-width: 0;
+                strong {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 16px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            &__price {
+                font-weight: 700;
+                display: flex;
+                align-items: flex-end;
+                height: 60%;
+                padding-right: 10px;
+                p {
+                    font-size: 15px;
+                }
+            }
+            }
+        }
+        .fill {
+            background-color: $color-tertiary;
+            transition: 500ms ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 0;
+            border-radius: 0 15px 15px 0;
+            .fa-check-circle {
+                font-size: 1.5rem;
+                color: transparent;
+            }
+        }
+    }
+}
+
+.btn-command {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

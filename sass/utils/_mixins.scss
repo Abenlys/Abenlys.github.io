@@ -51,22 +51,7 @@
     }
 }
 
-@keyframes remplissage {
 
-    25% {
-        transform: scale(0.25);
-        opacity: 0.6;
-    }
-    50% {
-        transform: scale(0.50);
-        opacity: 0.8;
-    }
-    75% {
-        transform: scale(0.75);
-        opacity: 0.95;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
+@mixin boxmenu {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
