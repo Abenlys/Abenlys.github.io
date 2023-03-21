@@ -21,6 +21,9 @@
     height: 275px;
     z-index: -1;
     object-fit: cover;
+    @media all and (min-width: 1024px) {
+      height: 400px;
+    }
   }
   .lieu {
     display: flex;

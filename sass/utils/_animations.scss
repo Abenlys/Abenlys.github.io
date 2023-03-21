@@ -22,9 +22,87 @@
         transform: translateY(0%);
     }
     90% {
-        transform: translateY(-20px);
+        transform: translateY(-3px);
     }
     100% {
         transform: translateY(0%);
+    }
+}
+
+@for $i from 1 through $x {
+    .box-p:nth-child(#{$i}) {
+        transform: translateY(-100%);
+        animation-name: drop-box;
+        animation-duration: $animation-duration;
+        animation-timing-function: $animation-timing-function;
+        animation-fill-mode: forwards;
+        animation-delay: $animation-delay * $i;
+    }
+}
+
+@keyframes hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transform: scale(1);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      
+    }
+    99%{
+        transform: scale(1);
+    }
+    100% {
+      transform: rotate(1800deg);
+      transform: scale(0);
+    }
+  }
+
+// @keyframes showeffect {
+//     from {
+//         display: flex;
+//     }
+//     to {
+//         display: none;
+//     }
+// }
+
+@keyframes flash {
+    0% {
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 7px linear-gradient($color-primary, $color-secondary);
+        transform: scale(1);
+    }
+    90% {
+        color: $color-tertiary;
+        text-shadow: none;
+    }
+    99%{
+        transform: scale(1);
+    }
+    100%{
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 7px linear-gradient($color-primary, $color-secondary);
+        transform: scale(0);
+    }
+}
+
+@keyframes lesscale {
+    0% {
+        transform: scale(1);
+    }
+    99% {
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
     }
 }

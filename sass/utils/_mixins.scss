@@ -55,3 +55,14 @@
 @mixin boxmenu {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+@mixin hide-loader {
+    animation: lds-hourglass 1500ms forwards;
+    &.lds-hourglass {
+        z-index: -100;
+        animation-fill-mode: forwards;
+    }
+    &.lds-hourglass::after {
+        display: none;
+    }
+}

@@ -1,0 +1,39 @@
+.container-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 500;
+    background-color: $light-blue;
+    animation: lesscale 3s linear forwards;
+    .lettre {
+      color: $color-tertiary;
+      font-size: 4.5rem;
+      letter-spacing: 15px;
+      animation: flash 1200ms linear 3 100ms forwards;
+      z-index: 500;
+    }
+    .lds-hourglass {
+      display: block;
+      border-radius: 50%;
+      width: 0;
+      height: 0;
+      margin: 8px;
+      box-sizing: border-box;
+      border: 32px solid $color-primary;
+      border-color: $color-primary transparent $color-secondary transparent;
+      animation: hourglass 1200ms linear 3 100ms forwards;
+      z-index: 500;
+    }
+  }
+
+  @for $i from 1 through 8 {
+    .lettre:nth-child(#{$i}) {
+      animation-delay: 0.1s * $i;
+    }
+  }
+
+
+
