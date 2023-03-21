@@ -2,7 +2,6 @@ footer {
     background-color: $bgfooter;
     padding-left: 25px;
     padding-bottom: 30px;
-    width: 100%;
     @media all and (min-width: 1024px) {
         display: flex;
         flex-direction: row-reverse;

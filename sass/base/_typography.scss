@@ -4,19 +4,23 @@
     }
   }
   
-  body *:not(#{$titres}) {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-  }
+body *:not(#{$titres}) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
   
-  * {
-    margin: 0;
-  }
-  
-  body {
-    margin-left: auto;
-    margin-right: auto;
-  }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-g {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
 
 a {
   text-decoration: none;
